@@ -140,8 +140,8 @@ int main(int argc, char* argv[])
 	//	
 
 	//生成xml文档
-	string src = "f:\\patentTest.txt";
-	string des = "f:\\patentTest.xml";
+	string src = "c:\\patentTest.txt";
+	string des = "c:\\patentTest.xml";
 	CreateXmlFile(src,des);
 
 	//压缩xml文档
@@ -162,7 +162,7 @@ int main(int argc, char* argv[])
 	{
       return -1;
 	}
-	HandleSingleFile("f:\\patentTest.xml",0);//0:压缩
+	HandleSingleFile("c:\\patentTest.xml",0);//0:压缩
 
 
 	
@@ -177,8 +177,8 @@ int main(int argc, char* argv[])
 	aes_den.SetKey(m_key);
 
 	////加密
-    CString SFileName="f:\\patentTest.xmi";
-	CString TFileName="f:\\patentTest.aes";
+    CString SFileName="c:\\patentTest.xmi";
+	CString TFileName="c:\\patentTest.aes";
     aes_en.SetFileName(SFileName,TFileName);
 	aes_en.EncrypFile();
 
@@ -186,13 +186,13 @@ int main(int argc, char* argv[])
 
 
 	////解密
-	CString _SFileName="f:\\patentTest.aes";
-	CString _TFileName="f:\\patentTest_.xmi";
+	CString _SFileName="c:\\patentTest.aes";
+	CString _TFileName="c:\\patentTest_.xmi";
     aes_den.SetFileName(_SFileName,_TFileName);
 	aes_den.DecrypFile();
 	
 	//解压缩
-	HandleSingleFile("f:\\patentTest_.xmi",1);//1:解压缩
+	HandleSingleFile("c:\\patentTest_.xmi",1);//1:解压缩
 
 
 
