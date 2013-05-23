@@ -34,6 +34,9 @@ History:
 // The current path is stored as a sequence of labels -
 // They are kept stored in blocks of 32 labels in 'CurPathLabelBlock'
 
+#ifndef _CURPATH_HPP_
+#define _CURPATH_HPP_
+
 // The number of labels per block
 #define CURPATH_LABELBLOCKSIZE   32
 
@@ -178,3 +181,5 @@ public:
 
 // There is one global path
 extern CurPath curpath;
+
+#endif

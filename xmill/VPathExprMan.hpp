@@ -36,6 +36,7 @@ History:
 #include "FSM.hpp"
 #include "CompressMan.hpp"
 
+
 class VPathExprMan;
 struct FSMManStateItem;
 class SmallBlockUncompressor;

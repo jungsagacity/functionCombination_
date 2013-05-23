@@ -38,7 +38,6 @@ History:
 
 #include <stdio.h>
 #include <string.h>
-
 #include "File.hpp"
 
 #ifndef min

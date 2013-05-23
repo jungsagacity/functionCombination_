@@ -28,6 +28,9 @@ History:
 //**************************************************************************
 //**************************************************************************
 
+#ifndef _CXMILL_HPP_
+#define _CXMILL_HPP_
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -102,6 +105,7 @@ extern UncompressContainerMan  uncomprcont;
 // The input buffer here can be larger than the input buffer
 // in 'Input'. The buffer here can contain an entire block
 // that is decompressed
+
 unsigned char *memoryalloc_buf=NULL;
 unsigned char *memoryalloc_curptr=NULL;
 unsigned long memoryalloc_bufsize=0;
@@ -123,10 +127,10 @@ extern unsigned long memory_cutoff;
 //**********************************
 
 // There are three separate memory spaces used:
-MemStreamer tmpmem(5);        // The temporary memory space
-MemStreamer mainmem(1000);    // The main memory space:
+extern MemStreamer tmpmem(5);        // The temporary memory space
+extern MemStreamer mainmem(1000);    // The main memory space:
                               // Takes information about path expressions
-MemStreamer blockmem(1000);   // The block memory space:
+extern MemStreamer blockmem(1000);   // The block memory space:
                               // This space is deleted after each run
                               // It contains all structural information from the
                               // containers, the path dictionary, etc.
@@ -156,11 +160,29 @@ int HandleAllOptions(char **argv,int argc);
 extern char overwrite_files;  // Is 1, if the user wants to overwrite all files
 extern char skip_all_files;   // Is 1, if the user want to skip all remaining files
 
-void HandleSingleFile(char *file,int handleType)
+bool HandleSingleFile(char *file,int handleType)
    // Considers a single file 'file' and (de)compresses it
    // Most importantly, the name of the destination file is
    // determines by modifying/adding/removing extensions '.xml', '.xmi', '.xm'
 {
+	try
+	{
+
+		globallabeldict.Init(); // Initialized the label dictionary
+		FSMInit();
+		char *pathptr="//#";
+		pathexprman.AddNewVPathExpr(pathptr,pathptr+strlen(pathptr));
+		pathptr="/";
+		pathexprman.AddNewVPathExpr(pathptr,pathptr+strlen(pathptr));
+		globallabeldict.FinishedPredefinedLabels();
+		pathexprman.InitWhitespaceHandling();
+
+	}
+	catch(XMillException *)     
+	{
+      return false;//字典初始化失败
+	}
+
    int len=strlen(file);
    char  *outfilename= new char[len+5];
       // We use the space after the input file 
@@ -170,7 +192,7 @@ void HandleSingleFile(char *file,int handleType)
 
    try{
 
-		if(handleType == 0)
+		if(handleType == 0)//压缩过程
 		{
 		   // For the compressor, we replace ending '.xml' with '.xmi'
 		   // Or, if there is no ending '.xml', we replace by '.xm'
@@ -186,7 +208,7 @@ void HandleSingleFile(char *file,int handleType)
 		   if(verbose)
 			  globallabeldict.PrintProfile();
 		#endif		
-		}else
+		}else//解压过程
 		{
 		   // For decompression, we omit ending '.xm' or replace
 		   // ending '.xmi' with '.xml'
@@ -201,7 +223,7 @@ void HandleSingleFile(char *file,int handleType)
 			  // We replace '.xmi' by '.xml'
 			  if((len>=4)&&(strcmp(file+len-4,".xmi")==0))
 			  {
-				 strcpy(outfilename+len-4,".xml");
+				 strcpy(outfilename+len-4,".xmll");
 				 Uncompress(file,usestdout ? NULL : outfilename);
 			  }
 			  else
@@ -216,7 +238,7 @@ void HandleSingleFile(char *file,int handleType)
 					if(FileExists(file))
 					{
 					   Uncompress(file,usestdout ? NULL : outfilename);
-					   return;
+					   return true;
 					}
 					strcpy(file+len-4,".xml");
 				 }
@@ -231,10 +253,10 @@ void HandleSingleFile(char *file,int handleType)
 					ErrorCont(file);
 					ErrorCont("' with extension '.xm'!");
 					PrintErrorMsg();
-					return;
+					return false;
 				 }
 				 Uncompress(file,usestdout ? NULL : outfilename);
-				 return;
+				 return true;
 			  }
 		   }			
 		}
@@ -246,9 +268,12 @@ void HandleSingleFile(char *file,int handleType)
       ErrorCont(file);
       ErrorCont("':");
       PrintErrorMsg();
+	  return false;
    }
 
    delete[] outfilename;
+   
+   return true;
 }
 
 
@@ -485,12 +510,12 @@ static int count=0;
 #endif
    if(verbose)
       PrintSpecialContainerSizeSum();
-
+/*
 #ifdef PROFILE
    if(verbose)
       curpath.PrintProfile();
 #endif
-
+*/
    xmlparse.CloseFile();
    output.CloseFile();
 
@@ -674,3 +699,5 @@ void Uncompress(char *sourcefile,char *destfile)
 
    mainmem.RemoveLastMemBlock();
 }
+
+#endif

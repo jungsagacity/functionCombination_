@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8DC814F8-0DE9-4227-AED5-4138FA300CE0}</ProjectGuid>
+    <RootNamespace>functionCombination</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AES\CRijndael.cpp" />
+    <ClCompile Include="CXML.cpp" />
+    <ClCompile Include="tinyXML\tinystr.cpp" />
+    <ClCompile Include="tinyXML\tinyxml.cpp" />
+    <ClCompile Include="tinyXML\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyXML\tinyxmlparser.cpp" />
+    <ClCompile Include="htmlcxx\Node.cpp" />
+    <ClCompile Include="htmlcxx\ParserDom.cpp" />
+    <ClCompile Include="htmlcxx\ParserSax.cpp" />
+    <ClCompile Include="xmill\adler32.c" />
+    <ClCompile Include="xmill\compress.c" />
+    <ClCompile Include="xmill\CompressMan.cpp" />
+    <ClCompile Include="xmill\ContMan.cpp" />
+    <ClCompile Include="xmill\crc32.c" />
+    <ClCompile Include="xmill\Decode.cpp" />
+    <ClCompile Include="xmill\deflate.c" />
+    <ClCompile Include="xmill\DivCompress.cpp" />
+    <ClCompile Include="xmill\EnumCompress.cpp" />
+    <ClCompile Include="xmill\Error.cpp" />
+    <ClCompile Include="xmill\FSM.cpp" />
+    <ClCompile Include="xmill\gzio.c" />
+    <ClCompile Include="xmill\infblock.c" />
+    <ClCompile Include="xmill\infcodes.c" />
+    <ClCompile Include="xmill\inffast.c" />
+    <ClCompile Include="xmill\inflate.c" />
+    <ClCompile Include="xmill\inftrees.c" />
+    <ClCompile Include="xmill\infutil.c" />
+    <ClCompile Include="xmill\maketree.c" />
+    <ClCompile Include="xmill\MemMan.cpp" />
+    <ClCompile Include="xmill\MemStreamer.cpp" />
+    <ClCompile Include="xmill\minigzip.c" />
+    <ClCompile Include="xmill\Options.cpp" />
+    <ClCompile Include="xmill\OrCompress.cpp" />
+    <ClCompile Include="xmill\Output.cpp" />
+    <ClCompile Include="xmill\PathDict.cpp" />
+    <ClCompile Include="xmill\PathTree.cpp" />
+    <ClCompile Include="xmill\RepeatCompress.cpp" />
+    <ClCompile Include="xmill\RunLenCompress.cpp" />
+    <ClCompile Include="xmill\SAXClient.cpp" />
+    <ClCompile Include="xmill\StdCompress.cpp" />
+    <ClCompile Include="xmill\trees.c" />
+    <ClCompile Include="xmill\UnCompCont.cpp" />
+    <ClCompile Include="xmill\uncompr.c" />
+    <ClCompile Include="xmill\VPathExprMan.cpp" />
+    <ClCompile Include="xmill\VRegExpr.cpp" />
+    <ClCompile Include="xmill\XMLOutput.cpp" />
+    <ClCompile Include="xmill\ZLib.cpp" />
+    <ClCompile Include="xmill\zutil.c" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AES\CRijndael.h" />
+    <ClInclude Include="CPatentStruct.H" />
+    <ClInclude Include="CStringProcess.H" />
+    <ClInclude Include="tinyXML\tinystr.h" />
+    <ClInclude Include="tinyXML\tinyxml.h" />
+    <ClInclude Include="htmlcxx\Node.h" />
+    <ClInclude Include="htmlcxx\ParserDom.h" />
+    <ClInclude Include="htmlcxx\ParserSax.h" />
+    <ClInclude Include="htmlcxx\stdafx.h" />
+    <ClInclude Include="htmlcxx\tree.h" />
+    <ClInclude Include="xmill\Compress.hpp" />
+    <ClInclude Include="xmill\CompressMan.hpp" />
+    <ClInclude Include="xmill\ContMan.hpp" />
+    <ClInclude Include="xmill\CurPath.hpp" />
+    <ClInclude Include="xmill\deflate.h" />
+    <ClInclude Include="xmill\Error.hpp" />
+    <ClInclude Include="xmill\File.hpp" />
+    <ClInclude Include="xmill\FileParser.hpp" />
+    <ClInclude Include="xmill\FSM.hpp" />
+    <ClInclude Include="xmill\infblock.h" />
+    <ClInclude Include="xmill\infcodes.h" />
+    <ClInclude Include="xmill\inffast.h" />
+    <ClInclude Include="xmill\inffixed.h" />
+    <ClInclude Include="xmill\inftrees.h" />
+    <ClInclude Include="xmill\infutil.h" />
+    <ClInclude Include="xmill\Input.hpp" />
+    <ClInclude Include="xmill\LabelDict.hpp" />
+    <ClInclude Include="xmill\Load.hpp" />
+    <ClInclude Include="xmill\CXMILL.h" />
+    <ClInclude Include="xmill\MemMan.hpp" />
+    <ClInclude Include="xmill\MemStreamer.hpp" />
+    <ClInclude Include="xmill\Output.hpp" />
+    <ClInclude Include="xmill\PathDict.hpp" />
+    <ClInclude Include="xmill\PathTree.hpp" />
+    <ClInclude Include="xmill\SAXClient.hpp" />
+    <ClInclude Include="xmill\SmallUncompress.hpp" />
+    <ClInclude Include="xmill\trees.h" />
+    <ClInclude Include="xmill\TreeTokens.hpp" />
+    <ClInclude Include="xmill\Types.hpp" />
+    <ClInclude Include="xmill\UnCompCont.hpp" />
+    <ClInclude Include="xmill\UnpackMem.hpp" />
+    <ClInclude Include="xmill\UserCompress.hpp" />
+    <ClInclude Include="xmill\VPathExprMan.hpp" />
+    <ClInclude Include="xmill\VRegExpr.hpp" />
+    <ClInclude Include="xmill\XMLOutput.hpp" />
+    <ClInclude Include="xmill\XMLParse.hpp" />
+    <ClInclude Include="xmill\zconf.h" />
+    <ClInclude Include="xmill\zlib.h" />
+    <ClInclude Include="xmill\zutil.h" />
+    <ClInclude Include="CXML.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

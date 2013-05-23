@@ -63,7 +63,7 @@ class XMLOutput : public Output
             curcol-=coldelta;
 
          if(x.intentation==XMLINTENT_SPACES)
-            mymemset(GetDataPtr(curcol),' ',curcol);
+            mymemset(GetDataPtr(curcol),'\t',curcol);
          else
             mymemset(GetDataPtr(curcol),'\t',curcol);
 

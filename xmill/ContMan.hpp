@@ -30,8 +30,8 @@ History:
 
 // This module contains the container manager for the compressor XMill
 
-#ifndef CONTMAN_HPP
-#define CONTMAN_HPP
+#ifndef _CONTMAN_HPP_
+#define _CONTMAN_HPP_
 
 
 

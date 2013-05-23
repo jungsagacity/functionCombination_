@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AES">
+      <UniqueIdentifier>{34cd607d-e058-43cb-b711-164a55300929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyXML">
+      <UniqueIdentifier>{d1c042fe-a71b-4611-b4a1-76bc150d9ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="htmlcxx">
+      <UniqueIdentifier>{d12d890f-256d-4f77-83d8-c156c38cd5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xmill">
+      <UniqueIdentifier>{16dda73d-15c6-4aed-a16e-5dd0c7a09fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{5d8f1f85-ecd0-4688-b6db-63bcc069addb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AES\CRijndael.cpp">
+      <Filter>AES</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXML\tinystr.cpp">
+      <Filter>tinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXML\tinyxml.cpp">
+      <Filter>tinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXML\tinyxmlerror.cpp">
+      <Filter>tinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXML\tinyxmlparser.cpp">
+      <Filter>tinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="htmlcxx\Node.cpp">
+      <Filter>htmlcxx</Filter>
+    </ClCompile>
+    <ClCompile Include="htmlcxx\ParserDom.cpp">
+      <Filter>htmlcxx</Filter>
+    </ClCompile>
+    <ClCompile Include="htmlcxx\ParserSax.cpp">
+      <Filter>htmlcxx</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\adler32.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\compress.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\CompressMan.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\ContMan.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\crc32.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\Decode.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\deflate.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\DivCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\EnumCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\Error.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\FSM.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\gzio.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\infblock.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\infcodes.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\inffast.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\inflate.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\inftrees.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\infutil.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\maketree.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\MemMan.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\MemStreamer.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\minigzip.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\Options.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\OrCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\Output.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\PathDict.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\PathTree.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\RepeatCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\RunLenCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\SAXClient.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\StdCompress.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\trees.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\UnCompCont.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\uncompr.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\VPathExprMan.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\VRegExpr.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\XMLOutput.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\ZLib.cpp">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="xmill\zutil.c">
+      <Filter>xmill</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CXML.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AES\CRijndael.h">
+      <Filter>AES</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXML\tinystr.h">
+      <Filter>tinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXML\tinyxml.h">
+      <Filter>tinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlcxx\Node.h">
+      <Filter>htmlcxx</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlcxx\ParserDom.h">
+      <Filter>htmlcxx</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlcxx\ParserSax.h">
+      <Filter>htmlcxx</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlcxx\stdafx.h">
+      <Filter>htmlcxx</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlcxx\tree.h">
+      <Filter>htmlcxx</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Compress.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\CompressMan.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\ContMan.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\CurPath.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\deflate.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Error.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\File.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\FileParser.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\FSM.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\infblock.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\infcodes.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\inffast.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\inffixed.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\inftrees.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\infutil.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Input.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\LabelDict.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Load.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\MemMan.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\MemStreamer.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Output.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\PathDict.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\PathTree.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\SAXClient.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\SmallUncompress.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\trees.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\TreeTokens.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\Types.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\UnCompCont.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\UnpackMem.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\UserCompress.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\VPathExprMan.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\VRegExpr.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\XMLOutput.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\XMLParse.hpp">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\zconf.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\zlib.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\zutil.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+    <ClInclude Include="CXML.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CStringProcess.H">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CPatentStruct.H">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="xmill\CXMILL.h">
+      <Filter>xmill</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

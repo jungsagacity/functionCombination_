@@ -36,14 +36,10 @@ History:
 class CompressMan;
 
 #include "MemStreamer.hpp"
-
-
 #include "ContMan.hpp"
 
 class UserCompressor;
 class CompressContainer;
-
-
 
 
 #include "XMLOutput.hpp"
